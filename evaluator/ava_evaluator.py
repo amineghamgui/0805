@@ -29,13 +29,14 @@ class AVA_Evaluator(object):
                  full_test_on_val=False,
                  version='v2.2'):
         self.all_preds = []
+        self.exclusion_file = os.path.join("ava_train_excluded_timestamps_v2.2.csv")
         self.full_ava_test = full_test_on_val
 
         self.backup_dir = d_cfg['backup_dir']
 
         self.labelmap_file = os.path.join("labelmapfile.pbtxt")
             
-        self.exclusion_file = os.path.join("ava_train_excluded_timestamps_v2.2.csv")
+        
         self.gt_box_list = os.path.join("/kaggle/input/validationcsv-version1/val.csv")
 
         # load data
